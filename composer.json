@@ -1,0 +1,16 @@
+{
+    "name": "shibleshakil/dynamic-language",
+    "description": "Automatic created language file in json format and also dynamically add missing language key in translation file",
+    "autoload": {
+        "psr-4": {
+            "shibleshakil\\DynamicLanguage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shibleshakil",
+            "email": "shakil.shible@gmail.com"
+        }
+    ],
+    "require": {}
+}
