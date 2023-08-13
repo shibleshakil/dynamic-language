@@ -12,5 +12,8 @@
             "email": "shakil.shible@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "MIT"
 }
