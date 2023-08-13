@@ -1,46 +1,66 @@
-﻿# dynamic-language
+# dynamic-language: Laravel Localization Management Simplified!
 
-The Laravel package called "dynamic-language" makes localization management easier, 
-by handling missing keys in language files. It smoothly generates language files 
-for each added language making localization efforts more streamlined. 
-Moreover it takes care of configuring locale settings ensuring seamless transitions between languages. 
-Developers looking for well organized localization support, in their Laravel applications will find this package to be a valuable tool.
+The **dynamic-language** Laravel package simplifies localization management, making it effortless to handle missing keys in language files. 
+It seamlessly generates language files for each newly added language, enhancing the efficiency of your localization efforts. Additionally, 
+it takes care of configuring locale settings, ensuring smooth transitions between languages. 
+Developers seeking well-organized localization support for their Laravel applications will find this package to be an invaluable tool.
 
-Installation
+## Installation
+
+To incorporate the **dynamic-language** package into your Laravel project, use Composer:
 
 ```
 composer require shibleshakil/dynamic-language
 ```
+Next, add the service provider to your config/app.php file:
 
-add the ServiceProvider to the providers array in config/app.php
 ```
 shibleshakil\DynamicLanguage\DynamicLanguageServiceProvider::class
 ```
 
-Copy the package config to your local config with the publish command:
+Copy the package config to your local config and migration file to your local migration directory with the publish command:
+
 ```
 php artisan vendor:publish --provider="shibleshakil\DynamicLanguage\DynamicLanguageServiceProvider" --tag="config"
+
 ```
 
+Finally, migrate the language table:
 
-migrate the language table
 ```
 php artisan migrate
 ```
 
-Description
+## Usage
 
-get the dafault local by calling
+Retrieve the default locale by calling:
+
 ```
 shibleshakil\DynamicLanguage\TranslationHelper::getDefaultLanguage()
+
 ```
 
-add new language file
+Add a new language file:
+
 ```
 shibleshakil\DynamicLanguage\TranslationHelper::addLanguageFile($lang)
+
 ```
 
-update language key value
+Update language key values:
+
 ```
 shibleshakil\DynamicLanguage\TranslationHelper::translateKey($key, $lang)
 ```
+
+Make your Laravel application's localization journey smoother with dynamic-language.
+
+
+## Contribution
+
+We welcome contributions from the community! Feel free to submit issues and pull requests to enhance this package.
+
+## License
+
+This package is open-source and distributed under the MIT License.
+
