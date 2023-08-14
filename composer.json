@@ -1,6 +1,6 @@
 {
     "name": "shibleshakil/dynamic-language",
-    "description": "Automatic created language file in json format and also dynamically add missing language key in translation file",
+    "description": "The dynamic-language Laravel package simplifies localization management, making it effortless to handle missing keys in language files. It seamlessly generates language files for each newly added language, enhancing the efficiency of your localization efforts. Additionally, it takes care of configuring locale settings, ensuring smooth transitions between languages.",
     "autoload": {
         "psr-4": {
             "shibleshakil\\DynamicLanguage\\": "src/"
