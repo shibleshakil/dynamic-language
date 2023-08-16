@@ -47,6 +47,13 @@ shibleshakil\DynamicLanguage\TranslationHelper::addLanguageFile($lang)
 
 ```
 
+Get all Transabled Keys of a locale:
+
+```
+shibleshakil\DynamicLanguage\TranslationHelper::allTransabledKeys($locale)
+```
+
+
 Update language key values:
 
 ```

@@ -39,6 +39,24 @@ class TranslationHelper
 
 
 
+    // get transabled keys
+    public static function allTransabledKeys($locale)
+    {
+        $jsonPath = resource_path('lang/'.$locale.'.json'); // Path to the JSON file
+
+        $datas = [];
+
+        if (file_exists($jsonPath)) {
+            $jsonContent = file_get_contents($jsonPath); // Read the JSON file contents
+            $datas = json_decode($jsonContent, true);
+        }
+
+        return $datas;
+
+    }
+
+
+
     // updates new language file
     public function translateKey($key, $code){
         $jsonPath = resource_path('lang/'.$code.'.json'); // Path to the JSON file
