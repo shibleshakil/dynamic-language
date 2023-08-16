@@ -53,6 +53,12 @@ Update language key values:
 shibleshakil\DynamicLanguage\TranslationHelper::translateKey($key, $lang)
 ```
 
+Explore the eloquent model for retrieving your language list:
+
+```
+$languages = shibleshakil\DynamicLanguage\Language::get();
+```
+
 Make your Laravel application's localization journey smoother with dynamic-language.
 
 
