@@ -58,7 +58,7 @@ class TranslationHelper
 
 
     // updates key value in language file
-    public function translateKey($key, $value, $code){
+    public static function translateKey($key, $value, $code){
         $jsonPath = resource_path('lang/'.$code.'.json'); // Path to the JSON file
         if (file_exists($jsonPath)) {
             $jsonContent = file_get_contents($jsonPath); // Read the JSON file contents
