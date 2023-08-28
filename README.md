@@ -57,7 +57,7 @@ shibleshakil\DynamicLanguage\TranslationHelper::allTransabledKeys($locale)
 Update language key values:
 
 ```
-shibleshakil\DynamicLanguage\TranslationHelper::translateKey($key, $lang)
+shibleshakil\DynamicLanguage\TranslationHelper::translateKey($key, $value, $lang)
 ```
 
 Explore the eloquent model for retrieving your language list:
