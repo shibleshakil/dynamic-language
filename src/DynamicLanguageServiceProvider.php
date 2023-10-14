@@ -8,7 +8,12 @@ class DynamicLanguageServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        //
+        $this->app->singleton('dynamic-language', function ($app) {
+            return new CustomTranslator(
+                $app['translation.loader'],
+                $app['config']['app.locale']
+            );
+        });
     }
 
     public function boot()
