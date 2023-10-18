@@ -13,7 +13,7 @@ class TranslationHelper
         $locales = Language::where('status', 1)->get()->pluck('code')->toArray();
 
         foreach ($locales as $langFile) {
-            $path = resource_path('lang/'.$langFile.'.json');
+            $path = \App::langPath($langFile.'.json');
             $translations = file_exists($path) ? json_decode(file_get_contents($path), true) : [];
             if (!array_key_exists($mkey, $translations)) {
                 $translations[$mkey] = '';
@@ -28,7 +28,7 @@ class TranslationHelper
     // creates new language file
     public static function addLanguageFile($lang)
     {
-        $path = resource_path("lang/{$lang}.json");
+        $path = \App::langPath($lang.'.json');
 
         if (!file_exists($path)) {
             $translations = [];
@@ -42,7 +42,7 @@ class TranslationHelper
     // get transabled keys
     public static function allTransabledKeys($locale)
     {
-        $jsonPath = resource_path('lang/'.$locale.'.json'); // Path to the JSON file
+        $jsonPath = \App::langPath($locale.'.json'); // Path to the JSON file
 
         $datas = [];
 
@@ -59,7 +59,7 @@ class TranslationHelper
 
     // updates key value in language file
     public static function translateKey($key, $value, $code){
-        $jsonPath = resource_path('lang/'.$code.'.json'); // Path to the JSON file
+        $jsonPath = \App::langPath($code.'.json'); // Path to the JSON file
         if (file_exists($jsonPath)) {
             $jsonContent = file_get_contents($jsonPath); // Read the JSON file contents
             $datas = json_decode($jsonContent, true);
